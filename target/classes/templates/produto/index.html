@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<title>Administração</title>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../administracao" role="button" aria-haspopup="true" aria-expanded="false">Administracao</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="../produto/cadastrar">Cadastrar Produto</a>
+      <a class="dropdown-item" href="../categoria/cadastrar">Cadastrar Categoria</a>
+      <a class="dropdown-item" href="../categoria/categorias">Listar Categoria</a>      
+      <a class="dropdown-item" href="../administracao/vendas">Relatorio de vendas</a>
+    </div>
+  </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../venda">Venda</a>
+      </li>      
+    </ul>    
+  </div>
+</nav>
+
+</head>
+<body class="content">
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+	<p>Cadastro de produtos</p>
+	<form action="cadastrar" method="post">
+	<div class="form-row">
+	<div class="form-group col-md-6">
+        <label for="titulo">Titulo</label>
+		<input type="text" name="titulo" id="titulo" class="form-control" placeholder="Titulo" />
+	</div>	
+	<div class="form-group col-md-6">
+        <label for="foto">Foto</label>
+		<input type="file" name="foto" id="foto" class="form-control" placeholder="Foto" />
+	</div>	
+		
+	<div class="form-group col-md-6">
+        <label for="descricao">Descrição</label>	
+		<input type="text" name="descricao" id="descricao" class="form-control" placeholder="Descrição" />
+	</div>	
+	<div class="form-group col-md-6">
+        <label for="preco">Preço</label>	
+		<input type="text" name="preco" id="preco" class="form-control" placeholder="Preço" />
+	</div>	
+	
+	<div class="form-group col-md-6">
+    <label for="categoria">Categoria</label>
+    <select class="form-control" id="categoria" name="categoria">
+      <option value="1">Informatica</option>
+      <option value="2">Calçados</option>
+    </select>
+  	</div>
+
+	 
+		<input type="submit" class="form-control" value="Cadastrar" />
+	
+	</div>	
+	</form>	
+</div>
+</div>	
+</body>
+</html>
